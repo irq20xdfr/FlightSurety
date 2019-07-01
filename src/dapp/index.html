@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="icon.png">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <main class="container">
+
+        <div id="display-wrapper" class="top-20">
+        </div>
+        <div class="row top-20">
+            <label class="form">Flight (number - dest - landing time)
+                    <input list="oracle-requests" id="oracle-request">
+                    <datalist id="oracle-requests">
+                    </datalist>
+            </label>
+            <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+        </div>
+        <hr style="border: 5;"/>
+        <div class="row top-20">
+            <label class="form" style="width:100px">Flight Number</label><input type="text" id="rf-flight"> 
+        </div>
+        <div class="row top-20">
+            <label class="form" style="width:100px">From</label> <input type="text" id="rf-from"> 
+        </div>
+        <div class="row top-20">
+            <label class="form" style="width:100px">To</label> <input type="text" id="rf-to"> 
+        </div>
+        <div class="row top-20">
+            <label class="form" style="width:100px">Price ETH</label> <input type="text" id="rf-price"> 
+        </div>
+        <div class="row top-20">
+            <label class="form" style="width:100px">Take off time</label> <input type="datetime-local" id="rf-takeoff"> 
+        </div>
+        <div class="row top-20">
+            <label class="form" style="width:100px">Landing time</label> <input type="datetime-local" id="rf-landing">
+        </div>
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="register-flight">Register Flight</btn>    
+        </div>
+        <hr style="border: 5;"/>
+        <div class="row top-20">
+                <label class="form" style="width:100px">Fund Amount ETH</label><input type="text" id="f-amount" style="width:500px" placeholder="e.g. 10">
+        </div>
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="fund">Fund</btn>    
+        </div>
+        <hr style="border: 5;"/>
+        <div class="row top-20">
+                <label class="form" style="width:100px">Airline Address</label><input type="text" id="ra-address" style="width:500px">
+        </div>
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="register-airline">Register Airline</btn>    
+        </div>
+        <hr style="border: 5;"/>
+        <div class="row top-20">            
+            <label class="form">Flight (Index - price - from - destination - take off time - landing time )
+            <input list="flights" id="buyFlight">
+            <datalist id="flights">
+            </datalist></label>
+        </div>
+
+        <div class="row top-20">
+            <label class="form">Insurance amount
+           <input type="number" id="buyAmount" min='0' max='1' step='0.1'></label>
+        </div>
+            
+        
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="buy">Book Flight</btn>
+        </div>
+        <hr style="border: 5;"/>
+        <div class="row top-20">
+            <p>In case there is of delay caused by the airline, passengers get 1.5x the insurance paid<p>
+            <p>Also the airlines can withdraw ticket prices in here</p>
+        </div>
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="pay">Claim</btn>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
